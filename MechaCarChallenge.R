@@ -6,11 +6,11 @@ mechacar_df <- read.csv(file="MechaCar_mpg.csv")
 mechacar_df
 #Perform linear regression using the lm() function. In the lm() function, pass in all six variables (i.e., columns), 
 #and add the dataframe you created in Step 4 as the data parameter.
-lm(vehicle_length ~ vehicle_weight + spoiler_angle + ground_clearance + AWD + mpg, data=mechacar_df)
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mechacar_df)
 
 #Using the summary() function, determine the p-value and the r-squared value for the linear regression model.
-summary(lm(vehicle_length ~ vehicle_weight + spoiler_angle + ground_clearance + AWD + mpg, data=mechacar_df)) 
-#R value = 0.7119
-#P-value = 6.712e-11
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mechacar_df)) 
+#R value = 0.7149
+#P-value = 5.35e-11
 
 #Save your MechaCarChallenge.RScript file to your GitHub repository.

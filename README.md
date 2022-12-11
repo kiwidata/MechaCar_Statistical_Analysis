@@ -17,4 +17,6 @@ The design specifications for the MechaCar suspension coils dictate that the var
 1) Looking at all lots - p value = 0.06 hence we cannot say its statistically different from the population mean of 1,500 PSI
 2) Looking at LOT 1 - pvalue = 1 for LOT 1, hence no proof statistically different from the population mean of 1,500 PSI
 3) Looking at LOT 2 - pvalue = 0.6 for LOT 2, hence no proof statistically different from the population mean of 1,500 PSI
-4) Looking at LOT 3 - pvalue = 0.04 for LOT 3, hence we can say it is statistically different from the population mean of 1,500 PSI
+4) Looking at LOT 3 - pvalue = 0.04 for LOT 3, hence we can say it is statistically different from the population mean of 1,500 PSI, Null Hypothesis is rejected.
+
+LOT 3 seems to have some issues and need to be expected to meet the necessary standards

@@ -11,3 +11,10 @@ The design specifications for the MechaCar suspension coils dictate that the var
 ![Total Summary](https://user-images.githubusercontent.com/111706055/206886173-95e5ea6e-4472-4f6a-8f87-2de2067e4899.png)
 
 ![Lot Summary](https://user-images.githubusercontent.com/111706055/206886176-253e9b63-9747-4368-a097-76f86e14c6d0.png)
+
+## T-Tests on Suspension Coils
+
+Looking at all lots - p value = 0.06 hence we cannot say its statistically different from the population mean of 1,500 PSI
+Looking at LOT 1 - pvalue = 1 for LOT 1, hence it is no proof statistically different from the population mean of 1,500 PSI
+Looking at LOT 2 - pvalue = 0.6 for LOT 2, hence no proof statistically different from the population mean of 1,500 PSI
+Looking at LOT 3 - pvalue = 0.04 for LOT 3, hence we can say it is statistically different from the population mean of 1,500 PSI

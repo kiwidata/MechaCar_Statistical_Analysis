@@ -1,6 +1,8 @@
 # Use the library() function to load the dplyr package.
 library(dplyr)
 
+#PART 1
+
 #Import and read in the MechaCar_mpg.csv file as a dataframe.
 mechacar_df <- read.csv(file="MechaCar_mpg.csv")
 mechacar_df
@@ -14,6 +16,8 @@ summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_cleara
 #P-value = 5.35e-11
 
 #Save your MechaCarChallenge.RScript file to your GitHub repository.
+
+#PART 2
 
 #Download the Suspension_Coil.csv file, and place it in the active directory for your R session.
 
@@ -30,3 +34,28 @@ total_summary
 #of the suspension coil’s PSI column.
 lot_summary = Suspension_Coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI), median_PSI=median(PSI),variance_PSI = var(PSI), SD_PSI=sd(PSI,na.rm=FALSE))
 lot_summary
+
+#PART3
+
+#In your MechaCarChallenge.RScript, write an RScript using the t.test() function to determine if the 
+#PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch.
+t.test(Suspension_Coil$PSI,mu=1500)
+# p value = 0.06 hence we cannot say its statistically different from the population mean of 1,500 PSI
+
+#Next, write three more RScripts in your MechaCarChallenge.RScript using the t.test() function 
+# and its subset() argument to determine if the PSI for each manufacturing lot is statistically 
+# different from the population mean of 1,500 pounds per square inch.
+
+LOT_1 <- t.test(subset(Suspension_Coil, Manufacturing_Lot=="Lot1")$PSI,mu=1500)
+LOT_1
+# pvalue = 1 for LOT 1, mean is 1500 hence not statistically different from the population mean of 1,500 PSI
+
+LOT_2 <- t.test(subset(Suspension_Coil, Manufacturing_Lot=="Lot2")$PSI,mu=1500)
+LOT_2
+# pvalue = 0.6 for LOT 2, mean is 1500.2 hence not statistically different from the population mean of 1,500 PSI
+
+LOT_3 <- t.test(subset(Suspension_Coil, Manufacturing_Lot=="Lot3")$PSI,mu=1500)
+LOT_3
+# pvalue = 0.04 for LOT 3, hence we can say statistically different from the population mean of 1,500 PSI
+
+
